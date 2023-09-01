@@ -19,13 +19,16 @@ function SignUp(){
         const requestBody = { name, email, password };
 
         axios.post(`${API_URL}/auth/signup`, requestBody)
-            .then((response) => {
-                navigate('/login');
-            })
-            .catch((error) => {
-                const errorDescription = error.response.data.message;
-                setErrorMessage(errorDescription);
-            })
+        .then((response) => {
+            navigate('/login');
+        })
+        .catch((error) => {
+            let  errorDescription = "There is an error";
+            if (error.response) {
+                errorDescription = error.response.data.message;
+            }
+            setErrorMessage(errorDescription);
+        })
     }
 
     return(
