@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import UpdateReview from "../UpdateReview/updateReview";
-import DeleteReview from "../DeleteReview/deleteReview";
 import CreateReview from "../CreateReview/createReview";
 
 const API_URL = "http://localhost:5005";
