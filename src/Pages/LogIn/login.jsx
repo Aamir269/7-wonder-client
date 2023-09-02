@@ -23,7 +23,7 @@ function LogIn(){
             .then((response) => {
                 storeToken(response.data.authToken);
                 authenticateUser();
-                navigate("/wonder/list");
+                navigate("/wonder/card");
             })
             .catch((error) => {
                 const errorMessage = error.response.data.message;

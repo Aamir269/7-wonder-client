@@ -21,7 +21,6 @@ function WonderCard(){
                     <div key={wonder.id}>
                         <Link to={`/wonder/${wonder.id}`}>
                             <h3>{wonder.name}</h3>
-                            
                         </Link>
                     </div>
                 );

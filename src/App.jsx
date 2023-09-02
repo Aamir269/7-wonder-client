@@ -8,6 +8,7 @@ import { Route, Routes } from 'react-router-dom';
 import WonderDetail from './Pages/WonderDetail/wonderDetail';
 import IsPrivate from './Components/IsPrivate/isprivate';
 import WonderCard from './Pages/WonderCard/wondercard';
+import UpdateReview from './Pages/UpdateReview/updateReview';
 
 const App = () => {
   return (
@@ -15,9 +16,9 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path='/' element={<Homepage />} />
-        {/* <Route path='/projects/create' element={<IsPrivate><AddProject /></IsPrivate>} />
-        <Route path='/projects/edit/:projectId' element={<IsPrivate><EditProjectPage /></IsPrivate>} /> */}
-        <Route path='/wonder/list' element={<WonderCard />} />
+        <Route path='/review/update/:reviewId/:wonderId' element={<IsPrivate><UpdateReview /></IsPrivate>} />
+        <Route path='/review/create/:wonderId' element={<IsPrivate><createReview /></IsPrivate>} />
+        <Route path='/wonder/card' element={<WonderCard />} />
         <Route path='/wonder/:wonderId' element={<WonderDetail />} />
         <Route path='/signup' element={<SignUp />} />
         <Route path='/login' element={<LogIn />} />
