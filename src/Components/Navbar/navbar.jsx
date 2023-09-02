@@ -12,6 +12,9 @@ function Navbar(){
                     <button>Home</button>
                 </Link>
             </div>
+            <div>
+                <h2>Welcome to 7 Wonders of the World Explorer!</h2>
+            </div>
             {isLoggedIn ? (
                     <div>
                         <button onClick={logOutUser}>Logout</button>
