@@ -21,13 +21,13 @@ function WonderDetail() {
 
     useEffect(() => {
         axios.get(`${API_URL}/api/wonder/${wonderId}`)
-            .then((response) => {
-                const oneWonder = response.data;
-                setName(oneWonder.name);
-                setDescription(oneWonder.description);
-                setLocation(oneWonder.location)
-            })
-            .catch((error) => { console.log(error) })
+        .then((response) => {
+            const oneWonder = response.data;
+            setName(oneWonder.name);
+            setDescription(oneWonder.description);
+            setLocation(oneWonder.location)
+        })
+        .catch((error) => { console.log(error) })
     }, [wonderId]);
 
     const deleteReview = (reviewId) => {
@@ -44,16 +44,16 @@ function WonderDetail() {
             <p>{location}</p>
             <p>{description}</p>
             <Link to={`/review/create/${wonderId}`} element={<CreateReview />}>Create Review</Link>
-            {reviews.map((review) => {
-                return (
-                    <div key={review._id}>
-                        <p>{review.author}</p>
-                        <p>{review.content}</p>
-                        <Link to={`/wonder/update/${review._id}/${wonderId}`} element={<UpdateReview />}>Update</Link>
-                        <button type="submit" onClick={deleteReview(review._id)}>Delete Review</button>
+            {/* {reviews.map((review) => {
+                return ( */}
+                    <div>
+                        <p>{reviews.author}</p>
+                        <p>{reviews.content}</p>
+                        <Link to={`/wonder/update/${reviews._id}/${wonderId}`} element={<UpdateReview />}>Update</Link>
+                        <button type="submit" onClick={deleteReview(reviews._id)}>Delete Review</button>
                     </div>
-                )
-            })}
+                {/* )
+            })} */}
 
         </div>
     );

@@ -20,12 +20,11 @@ function UpdateReview() {
         e.preventDefault();
         const requestBody = { author, content };
 
-        axios.put(`${API_URL}/api/wonder/${wonderId}/reviews/${reviewId}`)
-            .then(() => {
-                // navigate === redirect
-                navigate(`/wonder/${wonderId}`);
-            })
-            .catch((error) => { console.log(error) });
+        axios.put(`${API_URL}/api/wonder/${wonderId}/reviews/${reviewId}`, requestBody)
+        .then(() => {
+            navigate(`/wonder/${wonderId}`);
+        })
+        .catch((error) => { console.log(error) });
     }
 
     return (

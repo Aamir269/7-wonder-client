@@ -18,8 +18,8 @@ function WonderCard() {
         <div>
             {wonders.map((wonder) => {
                 return (
-                    <div key={wonder.id}>
-                        <Link to={`/wonder/${wonder.id}`}>
+                    <div key={wonder._id}>
+                        <Link to={`/wonder/${wonder._id}`}>
                             <h3>{wonder.name}</h3>
                         </Link>
                     </div>
