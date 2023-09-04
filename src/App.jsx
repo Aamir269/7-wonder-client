@@ -1,32 +1,37 @@
-import React from 'react';
-import Navbar from './Components/Navbar/navbar';
-import Footer from './Components/Footer/footer';
-import LogIn from './Pages/LogIn/login';
-import SignUp from './Pages/SignUp/signup';
-import Homepage from './Pages/HomePage/homepage';
-import { Route, Routes } from 'react-router-dom';
-import WonderDetail from './Pages/WonderDetail/wonderDetail';
-import IsPrivate from './Components/IsPrivate/isprivate';
-import WonderCard from './Pages/WonderCard/wondercard';
-import UpdateReview from './Pages/UpdateReview/updateReview';
-import CreateReview from './Pages/CreateReview/createReview';
+import './App.css'
+import {Routes, Route} from 'react-router-dom'
 
-const App = () => {
+import ProjectsListPage from "./Pages/ProjectsList";
+import ProjectDetailsPage from './Pages/ProjectDetails';
+import AddProject from './Pages/AddProject';
+import EditProjectPage from './Pages/EditProject';
+import SignupPage from './Pages/Signup';
+import LoginPage from './Pages/Login';
+import Navbar from './Components/Navbar';
+
+import IsPrivate from './Components/IsPrivate';
+import IsAnon from './Components/IsAnon';
+
+function App() {
+
   return (
     <div>
-      <Navbar />
-      <Routes>
-        <Route path='/' element={<Homepage />} />
-        <Route path='/review/update/:reviewId/:wonderId' element={<IsPrivate><UpdateReview /></IsPrivate>} />
-        <Route path='/review/create/:wonderId' element={<IsPrivate><CreateReview /></IsPrivate>} />
-        <Route path='/wonder/card' element={<WonderCard />} />
-        <Route path='/wonder/:wonderId' element={<WonderDetail />} />
-        <Route path='/signup' element={<SignUp />} />
-        <Route path='/login' element={<LogIn />} />
-      </Routes>
-      <Footer />
-    </div>
-  );
-};
+    <Navbar/>
+    <Routes>
+      <Route path="/" element={<ProjectsListPage/>}/>
 
-export default App;
+      <Route path="/projects/create" element={<IsPrivate><AddProject/></IsPrivate>}/>
+
+      <Route path="/projects/edit/:projectId" element={<IsPrivate><EditProjectPage/></IsPrivate>}/>
+
+      <Route path="/projects/:projectId" element={<IsPrivate><ProjectDetailsPage/></IsPrivate>}/>
+
+      <Route path="/signup" element={<IsAnon><SignupPage/></IsAnon>}/>
+      
+      <Route path="/login" element={<IsAnon><LoginPage/></IsAnon>} />
+    </Routes>
+    </div>
+  )
+}
+
+export default App
