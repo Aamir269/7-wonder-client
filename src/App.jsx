@@ -7,8 +7,8 @@ import IsPrivate from './Components/IsPrivate/isprivate';
 import WonderCard from './Pages/WonderCard/wondercard';
 import UpdateReview from './Pages/UpdateReview/updateReview';
 import LogIn from './Pages/Login/login';
-import { Route, Routes } from 'react-router-dom';
 import WonderDetail from './Pages/WonderDetail/wonderDetail';
+import { Route, Routes } from 'react-router-dom';
 
 const App = () => {
   return (

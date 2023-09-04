@@ -9,24 +9,24 @@ function CreateReview() {
     const { wonderId } = useParams();
     const navigate = useNavigate();
     const handleSubmit = () => {
-    async function createReview() {
-        try {
-            const storedToken = localStorage.getItem('authToken');
-            await axios.post(
-                `${API_URL}/api/wonder/${wonderId}/reviews`,
-                { content: content },
-                {
-                    headers: {
-                        Authorization: `Bearer ${storedToken}`,
-                    },
-                }
-            );
-            setContent('');
-        } catch (error) {
-            console.log(error);
+        async function createReview() {
+            try {
+                const storedToken = localStorage.getItem('authToken');
+                await axios.post(
+                    `${API_URL}/api/wonder/${wonderId}/reviews`,
+                    { content: content },
+                    {
+                        headers: {
+                            Authorization: `Bearer ${storedToken}`,
+                        },
+                    }
+                );
+                setContent('');
+            } catch (error) {
+                console.log(error);
+            }
         }
-    }
-    createReview();
+        createReview();
   };
 
     return (
@@ -34,7 +34,7 @@ function CreateReview() {
             <form onSubmit={handleSubmit}>
                 <label>
                     Description:
-                    <input type="text" value="description" onChange={(e) => setDescription(e.target.value)} />
+                    <input type="text" value="description" onChange={(e) => setContent(e.target.value)} />
                 </label>
                 <button type="submit">Create</button>
             </form>
