@@ -9,6 +9,7 @@ import WonderDetail from './Pages/WonderDetail/wonderDetail';
 import IsPrivate from './Components/IsPrivate/isprivate';
 import WonderCard from './Pages/WonderCard/wondercard';
 import UpdateReview from './Pages/UpdateReview/updateReview';
+import CreateReview from './Pages/CreateReview/createReview';
 
 const App = () => {
   return (
@@ -17,7 +18,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Homepage />} />
         <Route path='/review/update/:reviewId/:wonderId' element={<IsPrivate><UpdateReview /></IsPrivate>} />
-        <Route path='/review/create/:wonderId' element={<IsPrivate><createReview /></IsPrivate>} />
+        <Route path='/review/create/:wonderId' element={<IsPrivate><CreateReview /></IsPrivate>} />
         <Route path='/wonder/card' element={<WonderCard />} />
         <Route path='/wonder/:wonderId' element={<WonderDetail />} />
         <Route path='/signup' element={<SignUp />} />

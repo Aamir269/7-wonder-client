@@ -27,7 +27,7 @@ function CreateReview(){
             <form onSubmit={handleSubmit}>
             <label>
 				Description:
-				<input type="text" value="description" onChange={(e) => setDescription(e.target.value)} />
+                    <input type="text" value={content} onChange={(e) => setContent(e.target.value)} />
 			</label>
             <button type="submit">Create</button>
           </form>

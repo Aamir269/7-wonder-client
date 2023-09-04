@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
 import UpdateReview from "../UpdateReview/updateReview";
 import CreateReview from "../CreateReview/createReview";
@@ -44,16 +44,16 @@ function WonderDetail(){
             <p>{location}</p>
             <p>{description}</p>
             <Link to={`/review/create/${wonderId}`} element={<CreateReview />}>Create Review</Link>
-            {reviews.map((review) => {
-                return(
-                    <div key={review._id}>
-                        <p>{review.author}</p>
-                        <p>{review.content}</p>
-                        <Link to={`/wonder/update/${review._id}/${wonderId}`} element={<UpdateReview />}>Update</Link>
-                        <button type="submit" onClick={deleteReview(review._id)}>Delete Review</button>
+            {/* {reviews.map((review, index) => {
+                return( */}
+                    <div key={reviews._id}>
+                        <p>{reviews.author}</p>
+                        <p>{reviews.content}</p>
+                        <Link to={`/wonder/update/${reviews._id}/${wonderId}`} element={<UpdateReview />}>Update</Link>
+                        <button type="submit" onClick={deleteReview(reviews._id)}>Delete Review</button>
                     </div>
-                )
-            })}
+                {/* )
+            })} */}
             
         </div>
     );

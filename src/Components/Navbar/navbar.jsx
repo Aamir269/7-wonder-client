@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../../Context/context.auth';
+import WonderCard from '../../Pages/WonderCard/wondercard';
 
 function Navbar(){
     const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
@@ -17,6 +18,7 @@ function Navbar(){
             </div>
             {isLoggedIn ? (
                     <div>
+                    <Link to="/wonder/card" element={<WonderCard />}>Wonder List</Link>
                         <button onClick={logOutUser}>Logout</button>
                         <p>{user && user.name}</p>
                     </div>
