@@ -46,11 +46,11 @@ function WonderDetail(){
             <Link to={`/review/create/${wonderId}`} element={<CreateReview />}>Create Review</Link>
             {reviews.map((review) => {
                 return(
-                    <div key={review.id}>
+                    <div key={review._id}>
                         <p>{review.author}</p>
                         <p>{review.content}</p>
-                        <Link to={`/wonder/update/${review.id}/${wonderId}`} element={<UpdateReview />}>Update</Link>
-                        <button type="submit" onClick={deleteReview(review.id)}>Delete Review</button>
+                        <Link to={`/wonder/update/${review._id}/${wonderId}`} element={<UpdateReview />}>Update</Link>
+                        <button type="submit" onClick={deleteReview(review._id)}>Delete Review</button>
                     </div>
                 )
             })}
