@@ -1,10 +1,11 @@
+// src/Pages/EditReview/EditReview.jsx
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from 'axios';
 
 const API_URL = "http://localhost:5005";
 
-function UpdateReview() {
+function EditReview() {
     const [content, setContent] = useState("");
     const { reviewId, wonderId } = useParams();
     const navigate = useNavigate();
@@ -31,7 +32,7 @@ function UpdateReview() {
 
     return (
         <div>
-            <h3>Update your Review</h3>
+            <h3>Edit Review</h3>
             <form onSubmit={handleSubmit}>
                 <label>
                     Description:
@@ -43,4 +44,4 @@ function UpdateReview() {
     );
 }
 
-export default UpdateReview;
+export default EditReview;

@@ -1,9 +1,6 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
-import UpdateReview from "../UpdateReview/updateReview";
-import CreateReview from "../CreateReview/createReview";
-
 
 const API_URL = "http://localhost:5005";
 
@@ -30,37 +27,35 @@ function WonderDetail() {
             setDescription(oneWonder.description);
             setLocation(oneWonder.location)
             setReviews(oneWonder.reviews)
-            console.log("reviews",oneWonder.reviews)
+            console.log("reviews", oneWonder.reviews)
         })
         .catch((error) => { console.log(error) })
     }, [wonderId]);
 
-    /* const deleteReview = (reviewId) => {
-        axios.delete(`${API_URL}/api/wonder/${wonderId}/deleteReviews/${reviewId}`)
+    const deleteReview = (reviewId) => {
+        axios.delete(`${API_URL}/api/wonder/${wonderId}/reviews/${reviewId}`)
             .then(() => {
-                navigate('/');
+                // After successful deletion, you can update the reviews state to remove the deleted review.
+                setReviews(reviews.filter(review => review._id !== reviewId));
             })
             .catch((error) => { console.log(error) });
-    } */
-
+    }
 
     return (
         <div>
             <p>{name}</p>
             <p>{location}</p>
             <p>{description}</p>
-            <Link to={`/review/create/${wonderId}`} element={<CreateReview />}>Create Review</Link>
+            <Link to={`/review/create/${wonderId}`}>Create Review</Link>
             {reviews && reviews.map((review) => {
                 return (
-                    <div>
-                        {/* <p>{review.author}</p> */}
+                    <div key={review._id}>
                         <p>{review.content}</p>
-                        <Link to={`/wonder/update/${review._id}/${wonderId}`} element={<UpdateReview />}>Update</Link>
-                        {/* <button type="submit" onClick={deleteReview(reviews._id)}>Delete Review</button> */}
+                        <Link to={`/wonder/${wonderId}/edit/${review._id}`}>Edit</Link>
+                        <button type="button" onClick={() => deleteReview(review._id)}>Delete Review</button>
                     </div>
-                 )
+                )
             })}
-
         </div>
     );
 }
