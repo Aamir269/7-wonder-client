@@ -10,16 +10,25 @@ function CreateReview(){
     const navigate = useNavigate();
 
    // Handle Submit Function
-  const handleSubmit = (e) => {
-     e.preventDefault();
-
-     const requestBody = { content };
-
-      axios.post(`${API_URL}/api/wonder/${wonderId}/reviews`, requestBody)
-     .then(() => {
-         navigate(`/wonder/${wonderId}`);
-     })
-     .catch((error) => {console.log(error)});
+  const handleSubmit = () => {
+    async function createReview() {
+        try {
+            const storedToken = localStorage.getItem('authToken');
+            await axios.post(
+                `${API_URL}/api/wonder/${wonderId}/reviews`,
+                { content: content },
+                {
+                    headers: {
+                        Authorization: `Bearer ${storedToken}`,
+                    },
+                }
+            );
+            setContent('');
+        }catch(error) {
+            console.log(error);
+        }
+    }
+      createReview();
    }
 
     return(

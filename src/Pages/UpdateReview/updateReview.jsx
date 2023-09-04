@@ -20,7 +20,7 @@ function UpdateReview(){
         e.preventDefault();
         const requestBody = { author, content };
 
-            axios.put(`${API_URL}/api/wonder/${wonderId}/reviews/${reviewId}`)
+        axios.put(`${API_URL}/api/wonder/${wonderId}/reviews/${reviewId}`, requestBody)
             .then(() => {
                 // navigate === redirect
                 navigate(`/wonder/${wonderId}`);

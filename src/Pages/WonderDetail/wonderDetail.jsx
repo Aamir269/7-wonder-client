@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from 'react-router-dom';
-import axios from 'axios';
 import UpdateReview from "../UpdateReview/updateReview";
 import CreateReview from "../CreateReview/createReview";
+import axios from 'axios';
 
 const API_URL = "http://localhost:5005";
 
@@ -32,10 +32,10 @@ function WonderDetail(){
 
     const deleteReview = (reviewId) => {
         axios.delete(`${API_URL}/api/wonder/${wonderId}/deleteReviews/${reviewId}`)
-            .then(() => {
-                navigate('/');
-            })
-            .catch((error) => { console.log(error) });
+        .then(() => {
+            navigate('/');
+        })
+        .catch((error) => { console.log(error) });
     }
 
     return(
@@ -44,17 +44,12 @@ function WonderDetail(){
             <p>{location}</p>
             <p>{description}</p>
             <Link to={`/review/create/${wonderId}`} element={<CreateReview />}>Create Review</Link>
-            {/* {reviews.map((review, index) => {
-                return( */}
-                    <div key={reviews._id}>
-                        <p>{reviews.author}</p>
-                        <p>{reviews.content}</p>
-                        <Link to={`/wonder/update/${reviews._id}/${wonderId}`} element={<UpdateReview />}>Update</Link>
-                        <button type="submit" onClick={deleteReview(reviews._id)}>Delete Review</button>
-                    </div>
-                {/* )
-            })} */}
-            
+                <div key={reviews._id}>
+                    <p>{reviews.author}</p>
+                    <p>{reviews.content}</p>
+                    <Link to={`/wonder/update/${reviews._id}/${wonderId}`} element={<UpdateReview />}>Update</Link>
+                    <button type="submit" onClick={deleteReview(reviews._id)}>Delete Review</button>
+                </div>
         </div>
     );
 }
