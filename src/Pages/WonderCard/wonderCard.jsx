@@ -1,4 +1,3 @@
-import WonderDetail from "./wondercard";
 import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -10,8 +9,8 @@ function WonderCard() {
 
     useEffect(() => {
         axios.get(`${API_URL}/api/wonder`)
-            .then((response) => setWonders(response.data))
-            .catch((error) => { console.log(error) });
+        .then((response) => setWonders(response.data))
+        .catch((error) => { console.log(error) });
     }, []);
 
     return (
