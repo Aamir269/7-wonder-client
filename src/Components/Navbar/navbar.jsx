@@ -18,9 +18,7 @@ function Navbar() {
       </div>
       {isLoggedIn ? (
         <div>
-          <Link to="/wonder/card" element={<WonderCard />}>
-            Wonder List
-          </Link>
+          <Link to="/wonder/card" element={<WonderCard />}>Wonder List</Link>
           <button onClick={logOutUser}>Logout</button>
           <p>{user && user.name}</p>
         </div>

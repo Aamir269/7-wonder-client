@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from 'axios';
 
-function UpdateReview(){
-    const [ content, setContent ] = useState("");
+function UpdateReview() {
+    const [content, setContent] = useState("");
     const { reviewId, wonderId } = useParams();
     const navigate = useNavigate();
 
@@ -20,7 +20,7 @@ function UpdateReview(){
         e.preventDefault();
         const requestBody = { author, content };
 
-        axios.put(`${API_URL}/api/wonder/${wonderId}/reviews/${reviewId}`, requestBody)
+        axios.put(`${API_URL}/api/wonder/${wonderId}/reviews/${reviewId}`)
             .then(() => {
                 // navigate === redirect
                 navigate(`/wonder/${wonderId}`);
@@ -28,7 +28,7 @@ function UpdateReview(){
             .catch((error) => { console.log(error) });
     }
 
-    return(
+    return (
         <div>
             <h3>Update your Review</h3>
             <form onSubmit={handleSubmit}>
