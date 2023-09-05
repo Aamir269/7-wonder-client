@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import './wonderCard.css';
 
 const API_URL = "http://localhost:5005";
 
@@ -17,11 +18,11 @@ function WonderCard() {
         <div>
             {wonders.map((wonder) => {
                 return (
-                    <div key={wonder._id}>
-                        <Link to={`/wonder/${wonder._id}`}>
+                    <div key={wonder._id} className="flex">
+                        <Link to={`/wonder/${wonder._id}`} className="text-center">
                             <h3>{wonder.name}</h3>
+                            <img src={wonder.img_url} alt="Logo" className="imageConfiguration" /> 
                         </Link>
-                        {/* <img src={wonder.img_url} alt="Logo" /> */}
                     </div>
                 );
             })}

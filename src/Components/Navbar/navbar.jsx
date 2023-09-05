@@ -20,7 +20,9 @@ function Navbar() {
       <div className="gap-x-4">
         {isLoggedIn ? (
           <div className="flex gap-x-4 mt-3">
-            <Link to="/wonder/card" element={<WonderCard />} className="navbarWonderListBtnConfiguration border border-blue-700 rounded bg-blue-700 hover:bg-blue-950 hover:border-blue-950 text-neutral-50 align-middle">Wonder List</Link>
+            <Link to="/wonder/card" element={<WonderCard />} className="navbarWonderListBtnConfiguration border border-blue-700 rounded bg-blue-700 hover:bg-blue-950 hover:border-blue-950 text-neutral-50">
+              <p className="mt-2.5">Wonder List</p>
+            </Link>
             <p>{user && user.name}</p>
             <button className="navbarBtnConfiguration border border-blue-700 rounded bg-blue-700 hover:bg-blue-950 hover:border-blue-950 text-neutral-50" onClick={logOutUser}>Logout</button>
           </div>
