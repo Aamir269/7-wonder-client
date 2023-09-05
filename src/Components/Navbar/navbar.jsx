@@ -30,7 +30,7 @@ function Navbar() {
                 <button className="navbarBtnConfiguration border border-blue-700 rounded bg-blue-700 hover:bg-blue-950 hover:border-blue-950 text-neutral-50">Signup</button>
             </Link>
             <Link to="/login">
-                <button className="navbarBtnConfiguration border border-blue-700 rounded bg-blue-700 hover:bg-blue-950 hover:border-blue-950 text-neutral-50">Login</button>
+                <button className="navbarBtnConfiguration border border-blue-700 rounded bg-blue-700 hover:bg-blue-950 hover:border-blue-950 text-neutral-50 ml-2.5">Login</button>
             </Link>
           </div>
         )}
