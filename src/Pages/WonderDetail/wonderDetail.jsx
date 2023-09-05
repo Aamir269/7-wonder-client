@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { useContext } from "react";
 import { AuthContext } from "../../Context/context.auth";
 import axios from 'axios';
@@ -12,6 +12,14 @@ function WonderDetail() {
     const [description, setDescription] = useState("");
     const [location, setLocation] = useState("");
     const [wroteReview, setWroteReview] = useState(false); 
+
+    const [addVisit, setAddVisit] = useState(true); 
+    const [visitedIcon, setVisitedIcon] = useState(false); 
+
+    const storedToken = localStorage.getItem("authToken")
+
+    const navigate = useNavigate()
+    
     const { wonderId } = useParams();
     const { user } = useContext(AuthContext);
 
@@ -29,9 +37,15 @@ function WonderDetail() {
             setDescription(oneWonder.description);
             setLocation(oneWonder.location)
             setReviews(oneWonder.reviews)
+
+            oneWonder.visitedBy.map((element)=> {
+                if (element._id === user._id)
+                    setVisitedIcon(true)
+                setAddVisit(false)
+            })
         })
         .catch((error) => { console.log(error) })
-    }, [wonderId]);
+    }, [user]);
 
     const deleteReview = (reviewId) => {
         axios.delete(`${API_URL}/api/wonder/${wonderId}/reviews/${reviewId}`)
@@ -40,6 +54,17 @@ function WonderDetail() {
                 setReviews(reviews.filter(review => review._id !== reviewId));
             })
             .catch((error) => { console.log(error) });
+    }
+
+    const handleVisitButton = async (wonderId) => {
+        try {
+            await axios.post(`${API_URL}/api/user/addVisit-wonder/${wonderId}`, console.log('here') ,{
+                headers: {Authorization: `Bearer ${storedToken}`}
+            })
+            navigate("/wonder/card")
+        } catch (error) {
+            console.log(error)
+        }
     }
 
     return (
@@ -57,6 +82,14 @@ function WonderDetail() {
                     </div>
                 )
             })}
+
+            {visitedIcon && <>
+                <p>✔️</p>
+            </>}
+
+            {addVisit && <>
+                <button onClick={() => handleVisitButton(wonderId)}>Visited Country</button>
+            </>}
         </div>
     )
 }
