@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import axios from 'axios';
 
 const API_URL = "http://localhost:5005";
@@ -7,6 +7,7 @@ const API_URL = "http://localhost:5005";
 function CreateReview() {
     const [content, setContent] = useState("");
     const { wonderId } = useParams();
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -22,8 +23,11 @@ function CreateReview() {
                         Authorization: `Bearer ${storedToken}`,
                     },
                 }
-            );
+            ).then(() => {
+                navigate(`/wonder/card`);
+            });
             setContent('');
+            
         } catch (error) {
             console.log(error)
         }

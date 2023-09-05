@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import { useContext } from "react";
+import { AuthContext } from "../../Context/context.auth";
 import axios from 'axios';
 
 const API_URL = "http://localhost:5005";
@@ -9,9 +11,9 @@ function WonderDetail() {
     const [name, setName] = useState("");
     const [description, setDescription] = useState("");
     const [location, setLocation] = useState("");
+    const [wroteReview, setWroteReview] = useState(false); 
     const { wonderId } = useParams();
-
-    const navigate = useNavigate();
+    const { user } = useContext(AuthContext);
 
     useEffect(() => {
         axios.get(`${API_URL}/api/wonder/${wonderId}/reviews`)
@@ -27,7 +29,6 @@ function WonderDetail() {
             setDescription(oneWonder.description);
             setLocation(oneWonder.location)
             setReviews(oneWonder.reviews)
-            console.log("reviews", oneWonder.reviews)
         })
         .catch((error) => { console.log(error) })
     }, [wonderId]);
@@ -57,7 +58,7 @@ function WonderDetail() {
                 )
             })}
         </div>
-    );
+    )
 }
 
 export default WonderDetail;

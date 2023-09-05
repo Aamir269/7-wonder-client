@@ -1,7 +1,11 @@
 .footerDetailer{
     position: fixed;
-    left: 0;
     bottom: 0;
     width: 100%;
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(180deg, rgb(224 242 254) 0%, rgb(2 132 199) 100%);
 }

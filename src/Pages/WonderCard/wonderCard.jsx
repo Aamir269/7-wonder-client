@@ -21,6 +21,7 @@ function WonderCard() {
                         <Link to={`/wonder/${wonder._id}`}>
                             <h3>{wonder.name}</h3>
                         </Link>
+                        {/* <img src={wonder.img_url} alt="Logo" /> */}
                     </div>
                 );
             })}
