@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../Context/context.auth";
-import WonderCard from "../../Pages/WonderCard/wondercard";
+import WonderCard from "../../Pages/WonderCard/wonderCard";
 import './navbar.css';
 
 function Navbar() {
