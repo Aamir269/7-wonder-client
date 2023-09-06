@@ -3,7 +3,7 @@ import Navbar from './Components/Navbar/navbar';
 import Footer from './Components/Footer/footer';
 import SignUp from './Pages/Signup/signup';
 import Homepage from './Pages/Homepage/homepage';
-import IsPrivate from './Components/IsPrivate/isprivate';
+import IsPrivate from './Components/IsPrivate/isPrivate';
 import WonderCard from './Pages/WonderCard/wondercard';
 import UpdateReview from './Pages/UpdateReview/updateReview';
 import LogIn from './Pages/Login/login';
