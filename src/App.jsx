@@ -4,7 +4,7 @@ import Footer from './Components/Footer/footer';
 import SignUp from './Pages/Signup/signup';
 import Homepage from './Pages/Homepage/homepage';
 import IsPrivate from './Components/IsPrivate/isPrivate';
-import WonderCard from './Pages/WonderCard/wondercard';
+import WonderCard from './Pages/WonderCard/wonderCard';
 import UpdateReview from './Pages/UpdateReview/updateReview';
 import LogIn from './Pages/Login/login';
 import WonderDetail from './Pages/WonderDetail/wonderDetail';
