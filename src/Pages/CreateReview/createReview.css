@@ -1,0 +1,35 @@
+.formCreateReview{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.formConfiguration {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.createReviewField {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.inputCreateReviewConfiguration {
+    width: 250px;
+    height: 40px;
+    margin-left: 42.5%;
+    border-radius: 2%;
+    text-align: center;
+}
+
+.createBtn {
+    border-radius: 20px;
+    color: #fff;
+    width: 100px;
+    height: 40px;
+    margin-left: 47%;
+    margin-top: 1%;
+}

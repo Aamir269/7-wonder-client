@@ -8,7 +8,7 @@ function Navbar() {
   const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
 
   return (
-    <div className="navbarContainer gap-x-4 h-10 mt-8">
+    <div className="navbarContainer gap-x-4 h-10 mt-8 mb-8">
       <div className="mt-3">
         <Link to="/">
           <button className="navbarBtnConfiguration border border-blue-700 rounded bg-blue-700 hover:bg-blue-950 hover:border-blue-950 text-neutral-50 me-12">Home</button>

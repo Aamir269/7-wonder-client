@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from 'axios';
+import './createReview.css';
 
 const API_URL = "http://localhost:5005";
 
@@ -35,12 +36,17 @@ function CreateReview() {
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
-                <label>
-                    Description:
-                    <input type="text" value={content} onChange={(e) => setContent(e.target.value)} />
-                </label>
-                <button type="submit">Create</button>
+            <h3 className="text-center text-4xl">Create a Review</h3>
+            <form onSubmit={handleSubmit} className="formCreateReview">
+                <div className="formCreateReview">
+                    <label className="createReviewField">
+                        Description:
+                        <textarea value={content} className="inputCreateReviewConfiguration" onChange={(e) => setContent(e.target.value)} />
+                    </label>
+                    <button type="submit" className="createBtn border-green-600 hover:border-green-900 bg-green-600 hover:bg-green-900 text-slate-100 rounded">
+                        <p>Create</p>
+                    </button>
+                </div>
             </form>
         </div>
     );
