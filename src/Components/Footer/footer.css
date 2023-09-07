@@ -7,7 +7,7 @@
     flex-direction: row;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(180deg, rgb(224 242 254) 0%, rgb(2 132 199) 100%);
+    background: linear-gradient(180deg, rgb(224 242 254) 0%, rgb(152, 210, 238) 100%);
 }
 
 .socialLink{
