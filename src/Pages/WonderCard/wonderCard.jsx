@@ -19,7 +19,7 @@ function WonderCard() {
             {wonders.map((wonder) => {
                 return (
                     <div key={wonder._id} className="wonderCard">
-                        <Link to={`/wonder/${wonder._id}`} className="text-center">
+                        <Link to={`/wonder/${wonder._id}`} className="text-center linkTitleCard">
                             <h3>{wonder.name}</h3>
                             <img src={wonder.img_url} alt="Logo" className="imageConfiguration" />
                             <p>Read more</p>

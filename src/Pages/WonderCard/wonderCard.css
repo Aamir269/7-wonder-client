@@ -23,3 +23,7 @@ filter: grayscale(0);
     justify-content: center;
     flex-wrap: wrap;
 }
+
+.linkTitleCard{
+    text-decoration: none;
+}
