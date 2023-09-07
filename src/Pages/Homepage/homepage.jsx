@@ -6,7 +6,7 @@ function Homepage() {
       {/* Your existing content */}
       
       {/* Start of the carousel code */}
-      <div className="carousel slide mt-4" data-bs-ride="carousel" id="carouselExampleIndicators">
+      <div className="carousel slide mt-1" data-bs-ride="carousel" id="carouselExampleIndicators">
       
         <div className="carousel-indicators">
           <button aria-label="Slide 1" className="active" data-bs-slide-to="0" data-bs-target="#carouselExampleIndicators" type="button"></button>
