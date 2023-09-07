@@ -53,4 +53,30 @@
       transform: scale(1.05);
     }
   }
+  /* Navbar.css */
+/* Add styles for the search bar and button */
+.searchBar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .searchBar input {
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .searchButton {
+    background-color: #007bff;
+    color: #ccc;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .searchButton:hover {
+    background-color: #0056b3;
+  }
   

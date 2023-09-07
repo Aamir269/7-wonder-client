@@ -41,3 +41,15 @@
 .read-the-docs {
   color: #888;
 }
+
+/* app.css */
+.main-container {
+  text-align: center;
+  padding: 20px;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+

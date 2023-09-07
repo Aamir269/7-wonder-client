@@ -1,3 +1,4 @@
+// App.jsx
 import React from 'react';
 import Navbar from './Components/Navbar/navbar';
 import Footer from './Components/Footer/footer';
@@ -12,7 +13,7 @@ import CreateReview from './Pages/CreateReview/createReview';
 import MainTitle from './Components/MainTitle';
 import EditReview from './Pages/EditReview/editReview'; // Add/EditReview import
 import { Route, Routes } from 'react-router-dom';
-
+import Map from './Pages/Map/map'; // Import the Map component
 const App = () => {
   return (
     <div>
@@ -24,6 +25,7 @@ const App = () => {
         <Route path='/wonder/card' element={<WonderCard />} />
         <Route path='/wonder/:wonderId' element={<WonderDetail />} />
         <Route path='/signup' element={<SignUp />} />
+        <Route path='/map' element={<Map />} /> {/* Map route */}
         <Route path='/login' element={<LogIn />} />
         <Route path='/mainTitle' element={<MainTitle />} />
         <Route path='/wonder/:wonderId/edit/:reviewId' element={<IsPrivate><EditReview /></IsPrivate>} /> {/* Add/EditReview route */}

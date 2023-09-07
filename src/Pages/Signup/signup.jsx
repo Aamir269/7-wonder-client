@@ -51,6 +51,7 @@ function SignUp() {
                     {errorMesage && <p>{errorMesage}</p>}
                 </div>
             </form>
+            
         </div>
     );
 }

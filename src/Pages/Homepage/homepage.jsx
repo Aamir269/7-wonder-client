@@ -54,7 +54,7 @@ function Homepage() {
           </div>
           {/* Add more carousel items here */}
            <div className="carousel-item">
-            <img alt="Slide 5" className="d-block w-100" src="/Images/slide-5.jpg" style={{ maxHeight: '80vh' }} />
+            <img alt="Slide 5" className="d-block w-100" src="/Images/slide-6.jpg" style={{ maxHeight: '80vh' }} />
             <div className="carousel-caption">
               <h5 className="animated bounceInRight" style={{ animationDelay: '1s' }}>Slide 5</h5>
               <p className="animated bounceInLeft d-none d-md-block" style={{ animationDelay: '2s' }}>Description for Slide 5</p>
