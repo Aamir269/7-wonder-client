@@ -10,6 +10,7 @@ const API_URL = "http://localhost:5005";
 
 function WonderDetail() {
     const [reviews, setReviews] = useState([]);
+    const [users, setUsers] = useState([]);
     const [name, setName] = useState("");
     const [description, setDescription] = useState("");
     const [image, setImage] = useState("");
@@ -31,6 +32,13 @@ function WonderDetail() {
         .then((response) => setReviews(response.data))
         .catch((error) => { console.log(error) });
     }, [wonderId]);
+
+    useEffect(() => {
+        axios.get(`${API_URL}/api/users`)
+            .then((response) => {setUsers(response.data);})
+            .catch((error) => { console.log(error) });
+    }, [wonderId]);
+
 
     useEffect(() => {
         axios.get(`${API_URL}/api/wonder/${wonderId}`)
@@ -71,6 +79,10 @@ function WonderDetail() {
         }
     }
 
+    const handleUser = (userID, reviewName) => {
+        return (userID == reviewName);
+    }
+
     return (
         <div>
             <p className="text-center text-4xl pt-5">{name}</p>
@@ -88,17 +100,28 @@ function WonderDetail() {
             </div>
             {reviews && reviews.map((review) => {
                 return (
-                    <div key={review._id} className="btnsConfiguration text-center pb-5">
-                        <p>{review.author}</p>
+                    <div key={reviews._id} className="btnsConfiguration text-center pb-5">
+                        {users.filter(user => user._id == review.author).map(filteredUser => (
+                            <li>
+                                {filteredUser.name}
+                                </li>
+                                
+                            ))
+                        }
                         <p>{review.content}</p>
-                        <Link to={`/wonder/${wonderId}/edit/${review._id}`}>
-                            <button type="button" className="border-yellow-600 hover:border-yellow-900 bg-yellow-600 hover:bg-yellow-900 text-slate-100 rounded mr-1">
-                                <p className="m-1.5">Edit Review</p>
-                            </button>                            
-                        </Link>
-                        <button type="button" className="border-red-600 hover:border-red-900 bg-red-600 hover:bg-red-900 text-slate-100 rounded ml-1" onClick={() => deleteReview(review._id)}>
-                            <p className="m-1.5">Delete Review</p>
-                        </button>
+                        { handleUser(user._id, review.author) ? 
+                            <div>
+                                <Link to={`/wonder/${wonderId}/edit/${review._id}`}>
+                                    <button type="button" className="border-yellow-600 hover:border-yellow-900 bg-yellow-600 hover:bg-yellow-900 text-slate-100 rounded mr-1">
+                                        <p className="m-1.5">Edit Review</p>
+                                    </button>
+                                </Link>
+                                <button type="button" className="border-red-600 hover:border-red-900 bg-red-600 hover:bg-red-900 text-slate-100 rounded ml-1" onClick={() => deleteReview(review._id)}>
+                                    <p className="m-1.5">Delete Review</p>
+                                </button>
+                            </div> :
+                            <div></div>
+                        }                        
                     </div>
                 )
             })}
