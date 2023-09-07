@@ -21,7 +21,7 @@ function Homepage() {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img alt="Slide 1" className="d-block w-100" src="/Images/slide-1.jpg" style={{ maxHeight: '1000px' }} />
+            <img alt="Slide 1" className="d-block w-100" src="/Images/slide-1.jpg" style={{ maxHeight: '80vh' }} />
             <div className="carousel-caption">
               <h2 className="animated bounceInRight" style={{ animationDelay: '1s' }}>Taj Mehal</h2>
               <h5 className="animated bounceInLeft d-none d-md-block" style={{ animationDelay: '2s' }}>The Taj Mahal is approximately 369 years old and was built by the Mughal Emperor Shah Jahan in memory of his beloved wife Mumtaz Mahal.</h5>
@@ -29,7 +29,7 @@ function Homepage() {
             </div>
           </div>
           <div className="carousel-item">
-            <img alt="Slide 2" className="d-block w-100" src="/Images/slide-2.jpg" style={{ maxHeight: '1000px' }} />
+            <img alt="Slide 2" className="d-block w-100" src="/Images/slide-2.jpg" style={{ maxHeight: '80vh' }} />
             <div className="carousel-caption">
               <h5 className="animated bounceInRight" style={{ animationDelay: '1s' }}>Bernardo de Melo</h5>
               <p className="animated bounceInLeft d-none d-md-block" style={{ animationDelay: '2s' }}>“The more you study, the more you know; how less you know.” ― Imran Khan</p>
@@ -37,7 +37,7 @@ function Homepage() {
             </div>
           </div>
           <div className="carousel-item">
-            <img alt="Slide 3" className="d-block w-100" src="/Images/slide-3.jpg" style={{ maxHeight: '1000px' }} />
+            <img alt="Slide 3" className="d-block w-100" src="/Images/slide-3.jpg" style={{ maxHeight: '80vh' }} />
             <div className="carousel-caption">
               <h5 className="animated bounceInRight" style={{ animationDelay: '1s' }}>Bruno Rocha</h5>
               <p className="animated bounceInLeft d-none d-md-block" style={{ animationDelay: '2s' }}>“Never give up, no matter how hard life gets no matter how much pain you feel. Pain will eventually subside, nothing remains forever, so keep going and don't give up.” ― Imran Khan</p>
@@ -45,7 +45,7 @@ function Homepage() {
             </div>
           </div>
           <div className="carousel-item">
-            <img alt="Slide 4" className="d-block w-100" src="/Images/slide-4.jpg" style={{ maxHeight: '1000px' }} />
+            <img alt="Slide 4" className="d-block w-100" src="/Images/slide-4.jpg" style={{ maxHeight: '80vh' }} />
             <div className="carousel-caption">
               <h5 className="animated bounceInRight" style={{ animationDelay: '1s' }}>Slide 4</h5>
               <p className="animated bounceInLeft d-none d-md-block" style={{ animationDelay: '2s' }}>Description for Slide 4</p>
@@ -54,7 +54,7 @@ function Homepage() {
           </div>
           {/* Add more carousel items here */}
            <div className="carousel-item">
-            <img alt="Slide 5" className="d-block w-100" src="/Images/slide-5.jpg" style={{ maxHeight: '1000px' }} />
+            <img alt="Slide 5" className="d-block w-100" src="/Images/slide-5.jpg" style={{ maxHeight: '80vh' }} />
             <div className="carousel-caption">
               <h5 className="animated bounceInRight" style={{ animationDelay: '1s' }}>Slide 5</h5>
               <p className="animated bounceInLeft d-none d-md-block" style={{ animationDelay: '2s' }}>Description for Slide 5</p>
@@ -62,7 +62,7 @@ function Homepage() {
             </div>
           </div> 
           <div className="carousel-item">
-            <img alt="Slide 5" className="d-block w-100" src="/Images/slide-7.jpg" style={{ maxHeight: '1000px' }} />
+            <img alt="Slide 5" className="d-block w-100" src="/Images/slide-7.jpg" style={{ maxHeight: '80vh' }} />
             <div className="carousel-caption">
               <h5 className="animated bounceInRight" style={{ animationDelay: '1s' }}>Slide 5</h5>
               <p className="animated bounceInLeft d-none d-md-block" style={{ animationDelay: '2s' }}>Description for Slide 5</p>
@@ -70,7 +70,7 @@ function Homepage() {
             </div>
           </div> 
           <div className="carousel-item">
-            <img alt="Slide 5" className="d-block w-100" src="/Images/slide-8.jpg" style={{ maxHeight: '1000px' }} />
+            <img alt="Slide 5" className="d-block w-100" src="/Images/slide-8.jpg" style={{ maxHeight: '80vh' }} />
             <div className="carousel-caption">
               <h5 className="animated bounceInRight" style={{ animationDelay: '1s' }}>Slide 5</h5>
               <p className="animated bounceInLeft d-none d-md-block" style={{ animationDelay: '2s' }}>Description for Slide 5</p>
@@ -78,7 +78,7 @@ function Homepage() {
             </div>
           </div> 
           <div className="carousel-item">
-            <img alt="Slide 5" className="d-block w-100" src="/Images/slide-9.jpg"style={{ maxHeight: '1000px' }} />
+            <img alt="Slide 5" className="d-block w-100" src="/Images/slide-9.jpg"style={{ maxHeight: '80vh' }} />
             <div className="carousel-caption">
               <h5 className="animated bounceInRight" style={{ animationDelay: '1s' }}>Slide 5</h5>
               <p className="animated bounceInLeft d-none d-md-block" style={{ animationDelay: '2s' }}>Description for Slide 5</p>
