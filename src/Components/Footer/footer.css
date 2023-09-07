@@ -9,3 +9,12 @@
     text-align: center;
     background: linear-gradient(180deg, rgb(224 242 254) 0%, rgb(2 132 199) 100%);
 }
+
+.socialLink{
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+.paragraphPosition{
+    margin-top: 5px;
+}
