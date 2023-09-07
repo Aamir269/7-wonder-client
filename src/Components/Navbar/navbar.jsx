@@ -13,7 +13,7 @@ function Navbar() {
       <div className="navbarContainer">
         <div className="navbarLeft">
           <Link to="/">
-            <button className="navbarBtn border border-blue-700 rounded bg-blue-700 hover:bg-blue-950 hover:border-blue-950 text-neutral-50 me-12">Home</button>
+            <button className="navbarBtn border border-blue-700 rounded bg-blue-700 hover:bg-blue-950 hover:border-blue-950 text-neutral-50 me-12 font-bold">Home</button>
           </Link>
         </div>
         <div className="mainTitle">
@@ -23,20 +23,20 @@ function Navbar() {
           {isLoggedIn ? (
             <div className="flex gap-x-4">
               <Link to="/wonder/card" element={<WonderCard />} className="navbarBtn border border-blue-700 rounded bg-blue-700 hover:bg-blue-950 hover:border-blue-950 text-neutral-50">
-                <p>Wonder List</p>
+                <p className="font-bold pt-1">Wonder List</p>
               </Link>
-              <p>{user && user.name}</p>
+              <p className="font-bold text-xl name">{user && user.name}</p>
               <Link to="/" >
-                <button className="navbarBtn border border-blue-700 rounded bg-blue-700 hover:bg-blue-950 hover:border-blue-950 text-neutral-50" onClick={logOutUser}>Logout</button>
+                <button className="navbarBtn border border-blue-700 rounded bg-blue-700 hover:bg-blue-950 hover:border-blue-950 text-neutral-50 font-bold" onClick={logOutUser}>Logout</button>
               </Link>
             </div>
           ) : (
             <div className="flex gap-x-4">
               <Link to="/signup">
-                <button className="navbarBtn border border-blue-700 rounded bg-blue-700 hover:bg-blue-950 hover:border-blue-950 text-neutral-50">Signup</button>
+                  <button className="navbarBtn border border-blue-700 rounded bg-blue-700 hover:bg-blue-950 hover:border-blue-950 text-neutral-50 font-bold ">Signup</button>
               </Link>
               <Link to="/login">
-                <button className="navbarBtn border border-blue-700 rounded bg-blue-700 hover:bg-blue-950 hover:border-blue-950 text-neutral-50">Login</button>
+                  <button className="navbarBtn border border-blue-700 rounded bg-blue-700 hover:bg-blue-950 hover:border-blue-950 text-neutral-50 font-bold ">Login</button>
               </Link>
             </div>
           )}

@@ -35,15 +35,16 @@ function CreateReview() {
   };
 
     return (
-        <div>
+        <div class="w-full max-w-xs flex flex-col justify-center items-center positionForm">
             <h3 className="text-center text-4xl pt-5">Create a Review</h3>
-            <form onSubmit={handleSubmit} className="formCreateReview">
-                <div className="formCreateReview pb-3">
-                    <label className="createReviewField">
+            <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                <div className="formCreateReview pb-3 mb-4">
+                    <label className="createReviewField block text-xl text-black text-left text-sm font-bold mb-2">
                         Description:
-                        <textarea value={content} className="inputCreateReviewConfiguration" onChange={(e) => setContent(e.target.value)} />
                     </label>
-                    <button type="submit" className="createBtn border-green-600 hover:border-green-900 bg-green-600 hover:bg-green-900 text-slate-100 rounded">
+                    <textarea value={content} rows="4" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" onChange={(e) => setContent(e.target.value)} />
+                    
+                    <button type="submit" className="createBtn border-green-600 hover:border-green-900 bg-green-600 hover:bg-green-900 text-slate-100 rounded text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline">
                         <p>Create</p>
                     </button>
                 </div>

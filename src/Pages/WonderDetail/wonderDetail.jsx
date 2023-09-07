@@ -98,17 +98,18 @@ function WonderDetail() {
                     </button>                    
                 </Link>
             </div>
+            <div className="flex flex-row flex-wrap gap-y-2 gap-x-2 pb-5">
             {reviews && reviews.map((review) => {
                 return (
-                    <div key={reviews._id} className="btnsConfiguration text-center pb-5">
+                    <div key={reviews._id} className="btnsConfiguration text-center pb-5 w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                         {users.filter(user => user._id == review.author).map(filteredUser => (
-                            <li>
+                            <li className="mb-2 text-2xl font-semibold tracking-tight">
                                 {filteredUser.name}
                                 </li>
                                 
                             ))
                         }
-                        <p>{review.content}</p>
+                        <p className="mb-3 font-normal text-xl">{review.content}</p>
                         { handleUser(user._id, review.author) ? 
                             <div>
                                 <Link to={`/wonder/${wonderId}/edit/${review._id}`}>
@@ -125,12 +126,13 @@ function WonderDetail() {
                     </div>
                 )
             })}
+            </div>
 
-            {visitedIcon && <div className="text-center">
+            {visitedIcon && <div className="text-center pb-5">
                 <p>✔️</p>
             </div>}
 
-            {addVisit && <div className="text-center">
+            {addVisit && <div className="text-center pb-5">
                 <button onClick={() => handleVisitButton(wonderId)}>Visited Country</button>
             </div>}
         </div>
