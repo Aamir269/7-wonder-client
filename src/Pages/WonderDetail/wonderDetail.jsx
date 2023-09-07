@@ -73,13 +73,13 @@ function WonderDetail() {
 
     return (
         <div>
-            <p className="text-center text-4xl">{name}</p>
+            <p className="text-center text-4xl pt-5">{name}</p>
             <p className="text-center text-2xl">{location}</p>
-            <p className="text-center">{description}</p>
+            <p className="text-center pb-3">{description}</p>
             <div className="imageContainer">
                 <img src={image} className="imageDetailConfiguration" />
             </div>
-            <div className="text-center mt-4">
+            <div className="text-center mt-4 pb-5">
                 <Link to={`/review/create/${wonderId}`}>
                     <button type="button" className="border-green-600 hover:border-green-900 bg-green-600 hover:bg-green-900 text-slate-100 rounded">
                         <p className="m-1.5">Create Review</p>
@@ -88,7 +88,8 @@ function WonderDetail() {
             </div>
             {reviews && reviews.map((review) => {
                 return (
-                    <div key={review._id} className="btnsConfiguration text-center">
+                    <div key={review._id} className="btnsConfiguration text-center pb-5">
+                        <p>{review.author}</p>
                         <p>{review.content}</p>
                         <Link to={`/wonder/${wonderId}/edit/${review._id}`}>
                             <button type="button" className="border-yellow-600 hover:border-yellow-900 bg-yellow-600 hover:bg-yellow-900 text-slate-100 rounded mr-1">

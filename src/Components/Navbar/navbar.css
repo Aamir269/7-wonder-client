@@ -2,20 +2,19 @@
 .header {
     background-color: #fbd1a2 ; /* Set your desired background color */
     color: #fff; /* Set your desired text color */
-    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 15px; /* Adjust padding as needed */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a shadow if desired */
   }
   
-  .navbarContainer {
-    display: flex;
-    align-items: center;
-  }
-  
   .navbarLeft {
-    margin-right: auto; /* Pushes the navbar to the left */
+    float:left; /* Pushes the navbar to the left */
+  }
+  .navbarRight{
+    float: right;
+    position: relative;
+      bottom: 45px;
   }
   
   .navbarBtn {
@@ -27,6 +26,7 @@
     margin-right: 10px; /* Adjust spacing between buttons */
     cursor: pointer;
     transition: background-color 0.3s, border-color 0.3s;
+    text-decoration: none;
   }
   
   .navbarBtn:hover {
@@ -43,6 +43,8 @@
     color: transparent;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     animation: titleAnimation 3s ease-in-out infinite alternate;
+    text-align: center;
+    justify-content: center;
   }
   
   @keyframes titleAnimation {

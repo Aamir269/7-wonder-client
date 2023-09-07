@@ -36,9 +36,9 @@ function CreateReview() {
 
     return (
         <div>
-            <h3 className="text-center text-4xl">Create a Review</h3>
+            <h3 className="text-center text-4xl pt-5">Create a Review</h3>
             <form onSubmit={handleSubmit} className="formCreateReview">
-                <div className="formCreateReview">
+                <div className="formCreateReview pb-3">
                     <label className="createReviewField">
                         Description:
                         <textarea value={content} className="inputCreateReviewConfiguration" onChange={(e) => setContent(e.target.value)} />
