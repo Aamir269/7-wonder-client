@@ -34,13 +34,13 @@ function EditReview() {
     return (
         <div>
             <h3 className="text-center text-4xl">Edit Review</h3>
-            <form onSubmit={handleSubmit} className="formUpdateReview">
-                <div className="formUpdateReview">
-                    <label className="updateReviewField">
+            <form onSubmit={handleSubmit} className="">
+                <div className="formReviewContainer">
+                    <label className="textAreaConfiguration">
                         Description:
-                        <textarea className="inputUpdateReviewConfiguration" name="content" value={content} onChange={(e) => setContent(e.target.value)} />
+                        <textarea className="h-32 w-72" name="content" value={content} onChange={(e) => setContent(e.target.value)} />
                     </label>
-                    <button type="submit" className="updateBtn border-green-600 hover:border-green-900 bg-green-600 hover:bg-green-900 text-slate-100 rounded">
+                    <button type="submit" className="editBtn border-green-600 hover:border-green-900 bg-green-600 hover:bg-green-900 text-slate-100 rounded">
                         <p className="m-1">Update Review</p>
                     </button>
                 </div>
