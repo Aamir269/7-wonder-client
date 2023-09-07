@@ -10,6 +10,12 @@
     justify-content: center;
     flex-wrap: wrap;
 }
+.wonderCard{
+    filter: grayscale(100%);
+}
+.wonderCard:hover{
+filter: grayscale(0);
+}
 
 .cardContainer{
     display: flex;
