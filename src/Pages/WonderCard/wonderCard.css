@@ -5,18 +5,25 @@
 }
 
 .wonderCard{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.wonderCard{
     filter: grayscale(100%);
-    align-items: center
 }
 .wonderCard:hover{
 filter: grayscale(0);
 }
 
-.linkTitleCard{
-    text-decoration: none;
+.cardContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.positionContainer{
-    position: relative;
-    left: 18%;
+.linkTitleCard{
+    text-decoration: none;
 }

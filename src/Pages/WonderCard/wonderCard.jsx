@@ -15,7 +15,7 @@ function WonderCard() {
     }, []);
 
     return (
-        <div className="flex flex-row flex-wrap gap-x-4 gap-y-4 positionContainer pt-5">
+        <div className="cardContainer gap-x-4 gap-y-4">
             {wonders.map((wonder) => {
                 return (
                     <div key={wonder._id} className="wonderCard">

@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import './signup.css';
 
 const API_URL = "http://localhost:5005";
 
@@ -30,23 +31,25 @@ function SignUp() {
     }
 
     return (
-        <div className="w-full max-w-xs flex flex-col justify-center items-center positionForm">
-            <h1 className="text-center text-4xl pt-5">Create An Account</h1>
-            <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-                <label className="block text-xl text-black text-left text-sm font-bold mb-2 pb-3">
+        <div className="signUpContainer">
+            <h1 className="secondaryTitle">Create An Account</h1>
+            <form onSubmit={handleSubmit} className="formConfiguration">
+                <div className="formConfiguration">
+                    <label className="signUpField">
                         Name:
-                    <input type="text" name="name" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" value={name} onChange={(e) => setName(e.target.value)} />
+                        <input type="text" name="name" className="inputConfiguration" value={name} onChange={(e) => setName(e.target.value)} />
                     </label>
-                <label className="block text-xl text-black text-left text-sm font-bold mb-2 pb-3">
+                    <label className="signUpField">
                         Email:
-                    <input type="email" name="email" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" value={email} onChange={(e) => setEmail(e.target.value)} />
+                        <input type="email" name="email" className="inputConfiguration" value={email} onChange={(e) => setEmail(e.target.value)} />
                     </label>
-                <label className="block text-xl text-black text-left text-sm font-bold mb-2 pb-3">
+                    <label className="signUpField">
                         Password:
-                    <input type="password" name="password" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" value={password} onChange={(e) => setPassword(e.target.value)} />
+                        <input type="password" name="password" className="inputConfiguration" value={password} onChange={(e) => setPassword(e.target.value)} />
                     </label>
-                <button type="submit" className="border border-green-500 bg-green-500 hover:border-green-500 hover:bg-green-500 text-slate-100 rounded text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline">Sign Up</button>
+                    <button type="submit" className="signUpBtn border border-green-500 bg-green-500 hover:border-green-500 hover:bg-green-500">Sign Up</button>
                     {errorMesage && <p>{errorMesage}</p>}
+                </div>
             </form>
             
         </div>

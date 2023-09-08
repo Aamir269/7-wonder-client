@@ -1,19 +1,19 @@
-.formConfiguration {
+.formConfiguration{
     text-align: center;
     display: flex;
     flex-direction: column;
 }
 
-.logInContainer {
+.signUpContainer{
     margin-top: 100px;
 }
 
-.secondaryTitle {
+.secondaryTitle{
     font-size: 28px;
     text-align: center;
 }
 
-.logInBtn {
+.signUpBtn{
     border-radius: 20px;
     color: #fff;
     width: 100px;
@@ -22,16 +22,15 @@
     margin-top: 1%;
 }
 
-.logInField {
+.signUpField{
     display: flex;
     flex-direction: column;
     margin-top: 25px;
 }
 
-.inputLogInConfiguration {
+.inputConfiguration{
     width: 250px;
     height: 40px;
     margin-left: 42.5%;
     border-radius: 2%;
-    text-align: center;
 }

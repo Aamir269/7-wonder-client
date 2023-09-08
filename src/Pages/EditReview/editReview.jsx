@@ -33,10 +33,10 @@ function EditReview() {
 
     return (
         <div>
-            <h3 className="text-center text-4xl pt-5">Edit Review</h3>
+            <h3 className="text-center text-4xl">Edit Review</h3>
             <form onSubmit={handleSubmit} className="">
                 <div className="formReviewContainer">
-                    <label className="textAreaConfiguration pt-3 pb-3">
+                    <label className="textAreaConfiguration">
                         Description:
                         <textarea className="h-32 w-72" name="content" value={content} onChange={(e) => setContent(e.target.value)} />
                     </label>
