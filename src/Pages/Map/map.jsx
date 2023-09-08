@@ -3,7 +3,7 @@ import 'leaflet/dist/leaflet.css'; // Import Leaflet CSS
 import L from 'leaflet';
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5005';
+const API_URL = "https://seven-wonder-of-the-world.onrender.com";
 
 import EgyptImage from '/Images/Egypt.jpg'; // Import images
 import JordanImage from '/Images/Jordan.jpg';
