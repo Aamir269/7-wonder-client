@@ -2,20 +2,19 @@
 .header {
     background-color: #fbd1a2 ; /* Set your desired background color */
     color: #fff; /* Set your desired text color */
-    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 15px; /* Adjust padding as needed */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a shadow if desired */
   }
   
-  .navbarContainer {
-    display: flex;
-    align-items: center;
-  }
-  
   .navbarLeft {
-    margin-right: auto; /* Pushes the navbar to the left */
+    float:left; /* Pushes the navbar to the left */
+  }
+  .navbarRight{
+    float: right;
+    position: relative;
+      bottom: 45px;
   }
   
  /* Add the rest of your CSS styles here */
@@ -36,14 +35,19 @@
   
   /* Apply the animation to the buttons */
   .navbarBtn {
-    width: 80px;
+    width: 120px;
     height: 40px;
     background-color: #007bff;
     border: 1px solid #007bff;
+    text-align: center;
+    background-color: #007bff; /* Set your desired button background color */
+    border: 1px solid #007bff; /* Set your desired border color */
     border-radius: 5px;
     margin-right: 10px;
     cursor: pointer;
     transition: background-color 0.3s, border-color 0.3s, transform 0.5s ease-in-out;
+    transition: background-color 0.3s, border-color 0.3s;
+    text-decoration: none;
   }
   
   /* On hover, change button colors and trigger the animation */
@@ -63,10 +67,19 @@
     color: transparent;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     animation: titleAnimation 3s ease-in-out infinite alternate;
+    text-align: center;
+    justify-content: center;
   }
   /* footer.css */
 
 @keyframes titleAnimation {
+  
+  .name{
+    color: #007bff;
+    padding-top: 1%;
+  }
+
+  @keyframes titleAnimation {
     0% {
       transform: scale(1);
       color: red;
