@@ -113,4 +113,4 @@ function WonderDetail() {
     )
 }
 
-export default WonderDetail;
+export default WonderDetail; 

@@ -48,7 +48,7 @@ function LogIn() {
                     <button type="submit" className="logInBtn border border-green-500 bg-green-500 hover:border-green-500 hover:bg-green-500">Log In</button>
                     <div>
                         {errorMessage && <p>{errorMessage}</p>}
-                        <p>Do not have an account yet</p>
+                        <p>Do not have an account yet?</p>
                         <Link to="/signup">Sign Up</Link>
                     </div>
                 </div>

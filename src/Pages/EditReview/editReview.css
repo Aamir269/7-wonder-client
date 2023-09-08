@@ -1,18 +1,46 @@
-.formReviewContainer{
+/* Center the form review container vertically and horizontally */
+.formReviewContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.editBtn{
+    align-items: center;
+    height: 100vh; /* Center vertically on the viewport */
+  }
+  
+  /* Style the edit button */
+  .editBtn {
     width: 200px;
-    margin-left: 44.5%;
-    margin-top: 1%;
-}
-
-.textAreaConfiguration{
+    margin: 20px auto; /* Center the button horizontally and add spacing */
+    padding: 10px 20px; /* Add padding for a nicer appearance */
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  /* Change button color and scale on hover */
+  .editBtn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  /* Style the text area */
+  .textAreaConfiguration {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 41.8%;
-}
+    align-items: center;
+    margin-top: 20px; /* Add space between the button and text area */
+  }
+  
+  /* Adjust the width of the text area if needed */
+  .textAreaConfiguration textarea {
+    width: 300px;
+    height: 150px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  

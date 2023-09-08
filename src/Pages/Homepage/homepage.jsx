@@ -23,66 +23,90 @@ function Homepage() {
           <div className="carousel-item active">
             <img alt="Slide 1" className="d-block w-100" src="/Images/slide-1.jpg" style={{ maxHeight: '80vh' }} />
             <div className="carousel-caption">
-              <h2 className="animated bounceInRight" style={{ animationDelay: '1s' }}>Taj Mehal</h2>
-              <h5 className="animated bounceInLeft d-none d-md-block" style={{ animationDelay: '2s' }}>The Taj Mahal is approximately 369 years old and was built by the Mughal Emperor Shah Jahan in memory of his beloved wife Mumtaz Mahal.</h5>
-              <h5 className="animated bounceInRight" style={{ animationDelay: '3s' }}><a href="#">Learn More</a></h5>
+              <h2 className="animated bounceInRight" style={{ animationDelay: '1s' }}>Taj Mehal | India |</h2>
+              <p className="animated bounceInLeft d-none d-md-block" style={{ animationDelay: '2s' }}>The Taj Mehal is approximately 369 years old and was built by the Mughal Emperor Shah Jahan in memory of his beloved wife Mumtaz Mahal.</p>
+              <p className="animated bounceInRight" style={{ animationDelay: '3s' }}>
+  <a href="https://www.tajmahal.gov.in" target="_blank" rel="noopener noreferrer">Learn More</a>
+</p>
+
             </div>
           </div>
           <div className="carousel-item">
             <img alt="Slide 2" className="d-block w-100" src="/Images/slide-2.jpg" style={{ maxHeight: '80vh' }} />
             <div className="carousel-caption">
-              <h5 className="animated bounceInRight" style={{ animationDelay: '1s' }}>Bernardo de Melo</h5>
-              <p className="animated bounceInLeft d-none d-md-block" style={{ animationDelay: '2s' }}>“The more you study, the more you know; how less you know.” ― Imran Khan</p>
-              <p className="animated bounceInRight" style={{ animationDelay: '3s' }}><a href="#">Learn More</a></p>
+              <h2 className="animated bounceInRight" style={{ animationDelay: '1s' }}>Colosseum | Rome |</h2>
+              <p className="animated bounceInLeft d-none d-md-block" style={{ animationDelay: '2s' }}>The Colosseum in Rome, built by Emperor Vespasian and Titus around 70-80 AD, served as an iconic arena for gladiator battles and other public spectacles in ancient Rome.</p>
+              <p className="animated bounceInRight" style={{ animationDelay: '3s' }}>
+  <a href="https://colosseo.it/" target="_blank" rel="noopener noreferrer">Learn More</a>
+</p>
+
             </div>
           </div>
           <div className="carousel-item">
             <img alt="Slide 3" className="d-block w-100" src="/Images/slide-3.jpg" style={{ maxHeight: '80vh' }} />
             <div className="carousel-caption">
-              <h5 className="animated bounceInRight" style={{ animationDelay: '1s' }}>Bruno Rocha</h5>
-              <p className="animated bounceInLeft d-none d-md-block" style={{ animationDelay: '2s' }}>“Never give up, no matter how hard life gets no matter how much pain you feel. Pain will eventually subside, nothing remains forever, so keep going and don't give up.” ― Imran Khan</p>
-              <p className="animated bounceInRight" style={{ animationDelay: '3s' }}><a href="#">Learn More</a></p>
+              <h2 className="animated bounceInRight" style={{ animationDelay: '1s' }}>Great Pyramid of Giza | Egypet |</h2>
+              <p className="animated bounceInLeft d-none d-md-block" style={{ animationDelay: '2s' }}>The Great Pyramid of Giza, built around 2560 BC, is the oldest and largest of the Giza pyramids, serving as a monumental tomb for Pharaoh Khufu.</p>
+              <p className="animated bounceInRight" style={{ animationDelay: '3s' }}>
+  <a href="https://egymonuments.gov.eg/archaeological-sites/giza-plateau/" target="_blank" rel="noopener noreferrer">Learn More</a>
+</p>
+
             </div>
           </div>
           <div className="carousel-item">
             <img alt="Slide 4" className="d-block w-100" src="/Images/slide-4.jpg" style={{ maxHeight: '80vh' }} />
             <div className="carousel-caption">
-              <h5 className="animated bounceInRight" style={{ animationDelay: '1s' }}>Slide 4</h5>
-              <p className="animated bounceInLeft d-none d-md-block" style={{ animationDelay: '2s' }}>Description for Slide 4</p>
-              <p className="animated bounceInRight" style={{ animationDelay: '3s' }}><a href="#">Learn More</a></p>
+              <h2 className="animated bounceInRight" style={{ animationDelay: '1s' }}>Christ the Redeemer | Brazil |</h2>
+              <p className="animated bounceInLeft d-none d-md-block" style={{ animationDelay: '2s' }}>Christ the Redeemer, a monumental statue of Jesus Christ, stands atop Mount Corcovado in Rio de Janeiro, Brazil. It was completed in 1931 and has become an iconic symbol of both Rio and Christianity worldwide.</p>
+              <p className="animated bounceInRight" style={{ animationDelay: '3s' }}>
+  <a href="https://santuariocristoredentor.com.br/" target="_blank" rel="noopener noreferrer">Learn More</a>
+</p>
+
             </div>
           </div>
           {/* Add more carousel items here */}
            <div className="carousel-item">
             <img alt="Slide 5" className="d-block w-100" src="/Images/slide-6.jpg" style={{ maxHeight: '80vh' }} />
             <div className="carousel-caption">
-              <h5 className="animated bounceInRight" style={{ animationDelay: '1s' }}>Slide 5</h5>
-              <p className="animated bounceInLeft d-none d-md-block" style={{ animationDelay: '2s' }}>Description for Slide 5</p>
-              <p className="animated bounceInRight" style={{ animationDelay: '3s' }}><a href="#">Learn More</a></p>
+              <h2 className="animated bounceInRight" style={{ animationDelay: '1s' }}>China's Great Wall | China |</h2>
+              <p className="animated bounceInLeft d-none d-md-block" style={{ animationDelay: '2s' }}>The Great Wall of China is an ancient defensive structure spanning Northern China, built over centuries by various Chinese dynasties. It is one of the world's most iconic architectural marvels.</p>
+              <p className="animated bounceInRight" style={{ animationDelay: '3s' }}>
+  <a href="https://www.mutianyugreatwall.com/" target="_blank" rel="noopener noreferrer">Learn More</a>
+</p>
+
             </div>
           </div> 
           <div className="carousel-item">
             <img alt="Slide 5" className="d-block w-100" src="/Images/slide-7.jpg" style={{ maxHeight: '80vh' }} />
             <div className="carousel-caption">
-              <h5 className="animated bounceInRight" style={{ animationDelay: '1s' }}>Slide 5</h5>
-              <p className="animated bounceInLeft d-none d-md-block" style={{ animationDelay: '2s' }}>Description for Slide 5</p>
-              <p className="animated bounceInRight" style={{ animationDelay: '3s' }}><a href="#">Learn More</a></p>
+              <h2 className="animated bounceInRight" style={{ animationDelay: '1s' }}>Machu Pichu | Pero |</h2>
+              <p className="animated bounceInLeft d-none d-md-block" style={{ animationDelay: '2s' }}>Machu Picchu is an ancient Inca citadel located in Peru. It was built in the 15th century and is renowned for its stunning mountainous setting and well-preserved archaeological ruins.</p>
+              <p className="animated bounceInRight" style={{ animationDelay: '3s' }}>
+  <a href="https://www.machupicchu.gob.pe/" target="_blank" rel="noopener noreferrer">Learn More</a>
+</p>
+
             </div>
           </div> 
           <div className="carousel-item">
             <img alt="Slide 5" className="d-block w-100" src="/Images/slide-8.jpg" style={{ maxHeight: '80vh' }} />
             <div className="carousel-caption">
-              <h5 className="animated bounceInRight" style={{ animationDelay: '1s' }}>Slide 5</h5>
-              <p className="animated bounceInLeft d-none d-md-block" style={{ animationDelay: '2s' }}>Description for Slide 5</p>
-              <p className="animated bounceInRight" style={{ animationDelay: '3s' }}><a href="#">Learn More</a></p>
+              <h2 className="animated bounceInRight" style={{ animationDelay: '1s' }}>Easter Island | Chile |</h2>
+              <p className="animated bounceInLeft d-none d-md-block" style={{ animationDelay: '2s' }}>Easter Island in Chile is renowned for its colossal Moai statues, carved by the ancient Rapa Nui civilization, and remains a captivating archaeological and cultural site.</p>
+              <p className="animated bounceInRight" style={{ animationDelay: '3s' }}>
+  <a href="https://www.britannica.com/place/Easter-Island" target="_blank" rel="noopener noreferrer">Learn More</a>
+</p>
+
             </div>
           </div> 
           <div className="carousel-item">
             <img alt="Slide 5" className="d-block w-100" src="/Images/slide-9.jpg"style={{ maxHeight: '80vh' }} />
             <div className="carousel-caption">
-              <h5 className="animated bounceInRight" style={{ animationDelay: '1s' }}>Slide 5</h5>
-              <p className="animated bounceInLeft d-none d-md-block" style={{ animationDelay: '2s' }}>Description for Slide 5</p>
-              <p className="animated bounceInRight" style={{ animationDelay: '3s' }}><a href="#">Learn More</a></p>
+              <h2 className="animated bounceInRight" style={{ animationDelay: '1s' }}>Stoneage | England |</h2>
+              <p className="animated bounceInLeft d-none d-md-block" style={{ animationDelay: '2s' }}>The Stone Age was a prehistoric epoch characterized by the use of stone tools and marked the early stages of human civilization.</p>
+              <p className="animated bounceInRight" style={{ animationDelay: '3s' }}>
+  <a href="https://www.english-heritage.org.uk" target="_blank" rel="noopener noreferrer">Learn More</a>
+</p>
+
             </div>
           </div> 
         </div>

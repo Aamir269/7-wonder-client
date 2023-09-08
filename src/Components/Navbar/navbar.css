@@ -18,21 +18,41 @@
     margin-right: auto; /* Pushes the navbar to the left */
   }
   
+ /* Add the rest of your CSS styles here */
+
+/* Define a keyframe animation */
+
+@keyframes buttonScale {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Apply the animation to the buttons */
   .navbarBtn {
     width: 80px;
     height: 40px;
-    background-color: #007bff; /* Set your desired button background color */
-    border: 1px solid #007bff; /* Set your desired border color */
+    background-color: #007bff;
+    border: 1px solid #007bff;
     border-radius: 5px;
-    margin-right: 10px; /* Adjust spacing between buttons */
+    margin-right: 10px;
     cursor: pointer;
-    transition: background-color 0.3s, border-color 0.3s;
+    transition: background-color 0.3s, border-color 0.3s, transform 0.5s ease-in-out;
   }
   
+  /* On hover, change button colors and trigger the animation */
   .navbarBtn:hover {
-    background-color: #0056b3; /* Change button background color on hover */
-    border-color: #0056b3; /* Change border color on hover */
+    background-color: #0056b3;
+    border-color: #0056b3;
+    animation: buttonScale 1s ease infinite; /* Apply the animation */
   }
+  
   
   .mainTitle {
     font-family: 'Times New Roman', Times, serif;
@@ -44,39 +64,76 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     animation: titleAnimation 3s ease-in-out infinite alternate;
   }
-  
-  @keyframes titleAnimation {
+  /* footer.css */
+
+@keyframes titleAnimation {
     0% {
       transform: scale(1);
+      color: red;
+    }
+    20% {
+      color: orange;
+    }
+    40% {
+      color: yellow;
+    }
+    60% {
+      color: green;
+    }
+    80% {
+      color: blue;
     }
     100% {
       transform: scale(1.05);
+      color: violet;
     }
   }
+  
+  .text-blue-950 {
+    animation: titleAnimation 5s infinite alternate; /* Add animation to the names */
+    transition: color 0.5s; /* Add a color transition for smooth animation */
+  }
+  
+  .socialLink {
+    margin-right: 20px; /* Add spacing between the names */
+  }
+  
+  
   /* Navbar.css */
 /* Add styles for the search bar and button */
+/* Add the rest of your CSS styles here */
+
+/* Center the search bar horizontally */
 .searchBar {
     display: flex;
     align-items: center;
+    justify-content: center;
   }
   
   .searchBar input {
     width: 200px;
-    padding: 5px;
+    padding: 10px; /* Increase padding for better appearance */
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 20px; /* Increase border-radius for rounded corners */
+    outline: none; /* Remove the input outline on focus */
   }
   
+  /* Style the search button */
   .searchButton {
     background-color: #007bff;
-    color: #ccc;
+    color: #fff; /* White text color */
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
+    padding: 10px 20px; /* Increase padding for better appearance */
     margin-left: 10px;
     cursor: pointer;
+    transition: background-color 0.3s;
   }
   
+  /* Change button color on hover */
   .searchButton:hover {
     background-color: #0056b3;
   }
+  
+  
   

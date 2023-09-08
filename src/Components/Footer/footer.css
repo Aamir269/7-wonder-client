@@ -18,3 +18,12 @@
 .paragraphPosition{
     margin-top: 5px;
 }
+
+/* footer.css */
+.text-blue-950 {
+    color: blue; /* Set the color to blue */
+}
+
+.socialLink {
+    margin-right: 20px; /* Add spacing between the names */
+}
